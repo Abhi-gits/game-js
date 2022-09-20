@@ -40,7 +40,7 @@ function startGame(){
     //random apple
     direction = 1;
     scoreDisplay.innerHTML = score;
-    intervalTime = 1000;
+    intervalTime = 500;
     currentSnake = [2, 1, 0];
     currentIndex = 0;
     interval = setInterval(moveOutcome, intervalTime);
@@ -52,6 +52,7 @@ function moveOutcome(){
     {
         alert("you hit something");
         popup.style.display = "flex";
+        score = 0;
         return clearInterval(interval);
     }
     else{
