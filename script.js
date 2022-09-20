@@ -16,12 +16,12 @@ let speed = 1;
 let intervalTime = 0;
 let interval = 0;
 
-document.addEventListener("DOMContentLoaded", function(){
-    document.addEventListener("keyup", control);
+window.onload =  function(){
+      
     createBoard();
     startGame();
     playAgain.addEventListener("click", replay);
-})
+}
 
 //CreateBoard function
 function createBoard(){
@@ -31,6 +31,7 @@ function createBoard(){
         let div = document.createElement("div");
         grid.appendChild(div);
     }
+    
 }
 
 
@@ -44,6 +45,7 @@ function startGame(){
     currentSnake = [2, 1, 0];
     currentIndex = 0;
     interval = setInterval(moveOutcome, intervalTime);
+    
 }
 
 function moveOutcome(){
@@ -134,3 +136,6 @@ function replay() {
     popup.style.display = "none";
     
 }
+
+
+/*document.addEventListener("keyup", control(e));    */
