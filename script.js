@@ -6,13 +6,13 @@ let left = document.querySelector(".left");
 let bottom = document.querySelector(".bottom");
 let right = document.querySelector(".right");
 let up = document.querySelector(".top");
-let width = 10;
+let width = 20;
 let currentIndex = 0;
 let appleIndex = 0;
 let currentSnake = [2,1,0];
 let direction = 1;
 let score = 0;
-let speed = 0.8;
+let speed = 1;
 let intervalTime = 0;
 let interval = 0;
 
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(){
 //CreateBoard function
 function createBoard(){
     popup.style.display = "none";
-    for(let i = 0; i < 100; i++)
+    for(let i = 0; i < 400; i++)
     {
         let div = document.createElement("div");
         grid.appendChild(div);
@@ -110,13 +110,13 @@ function control(e){
         direction = 1; //right
     }
     else if(e.keycode === 38){
-        direction = -width; //if we press the uparrow, the snake will go 20 divs up
+        direction = direction - 10; //if we press the uparrow, the snake will go 20 divs up
     }
     else if(e.keycode === 37){
         direction = -1;//left, the snake will go left on div
     }
     else if(e.keycode === 40){
-        direction = +width; //down the snake head will instantly appear 10 divs below from the current div
+        direction = direction + 10; //down the snake head will instantly appear 10 divs below from the current div
     }
 }
 
