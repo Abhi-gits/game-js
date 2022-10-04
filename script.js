@@ -1,3 +1,4 @@
+// A very basic snake game code.
 let grid = document.querySelector(".grid");
 let popup = document.querySelector(".popup");
 let playAgain = document.querySelector(".playAgain");
@@ -23,7 +24,7 @@ window.onload =  function(){
     playAgain.addEventListener("click", replay);
 }
 
-//CreateBoard function
+// Creating CreateBoard function
 function createBoard(){
     popup.style.display = "none";
     for(let i = 0; i < 400; i++)
@@ -34,7 +35,7 @@ function createBoard(){
     
 }
 
-
+// Start of the game
 function startGame(){
     let squares = document.querySelectorAll(".grid div");
     randomApple(squares);
@@ -86,7 +87,7 @@ function checkForHits(squares){
     }
 }
 
-
+// eating the food provided
 function eatApple(squares, tail){
     if(squares[currentSnake[0]].classList.contains("apple")){
         squares[currentSnake[0]].classList.remove("apple");
