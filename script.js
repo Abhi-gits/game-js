@@ -9,33 +9,32 @@ let up = document.querySelector(".top");
 let width = 20;
 let currentIndex = 0;
 let appleIndex = 0;
-let currentSnake = [2,1,0];
+let currentSnake = [2, 1, 0];
 let direction = 1;
 let score = 0;
 let speed = 1;
 let intervalTime = 0;
 let interval = 0;
 
-window.onload =  function(){
-      
+window.onload = function () {
+
     createBoard();
     startGame();
     playAgain.addEventListener("click", replay);
 }
 
 //CreateBoard function
-function createBoard(){
+function createBoard() {
     popup.style.display = "none";
-    for(let i = 0; i < 400; i++)
-    {
+    for (let i = 0; i < 400; i++) {
         let div = document.createElement("div");
         grid.appendChild(div);
     }
-    
+
 }
 
 
-function startGame(){
+function startGame() {
     let squares = document.querySelectorAll(".grid div");
     randomApple(squares);
     //random apple
@@ -45,24 +44,23 @@ function startGame(){
     currentSnake = [2, 1, 0];
     currentIndex = 0;
     interval = setInterval(moveOutcome, intervalTime);
-    
+
 }
 
-function moveOutcome(){
+function moveOutcome() {
     let squares = document.querySelectorAll(".grid div");
-    if(checkForHits(squares))
-    {
+    if (checkForHits(squares)) {
         alert("you hit something");
         popup.style.display = "flex";
         score = 0;
         return clearInterval(interval);
     }
-    else{
+    else {
         moveSnake(squares);
     }
 }
 
-function moveSnake(squares){
+function moveSnake(squares) {
     let tail = currentSnake.pop();
     squares[tail].classList.remove("snake");
     currentSnake.unshift(currentSnake[0] + direction);
@@ -71,24 +69,24 @@ function moveSnake(squares){
     squares[currentSnake[0]].classList.add("snake");
 }
 
-function checkForHits(squares){
-    if(
+function checkForHits(squares) {
+    if (
         (currentSnake[0] + width >= (width * width) && direction === width) ||
-        (currentSnake[0] % width === (width-1) && direction === 1) ||
-        (currentSnake[0] % width === 0 && direction === -1) || 
+        (currentSnake[0] % width === (width - 1) && direction === 1) ||
+        (currentSnake[0] % width === 0 && direction === -1) ||
         (currentSnake[0] - width <= 0 && direction === -width) ||
-        squares[currentSnake[0]+direction].classList.contains("snake")
-    ){
+        squares[currentSnake[0] + direction].classList.contains("snake")
+    ) {
         return true;
     }
-    else{
+    else {
         return false;
     }
 }
 
 
-function eatApple(squares, tail){
-    if(squares[currentSnake[0]].classList.contains("apple")){
+function eatApple(squares, tail) {
+    if (squares[currentSnake[0]].classList.contains("apple")) {
         squares[currentSnake[0]].classList.remove("apple");
         squares[tail].classList.add("snake");
         currentSnake.push(tail);
@@ -101,41 +99,45 @@ function eatApple(squares, tail){
     }
 }
 
-function randomApple(squares){
-    do{
+function randomApple(squares) {
+    do {
         appleIndex = Math.floor(Math.random() * squares.length);
-    }while(squares[appleIndex].classList.contains("snake"));
+    } while (squares[appleIndex].classList.contains("snake"));
     squares[appleIndex].classList.add("apple");
 }
 
-function control(e){
-    if(e.keycode === 39){
+function control(e) {
+    if (e.keycode === 39) {
         direction = 1; //right
     }
-    else if(e.keycode === 38){
+    else if (e.keycode === 38) {
         direction = direction - 10; //if we press the uparrow, the snake will go 20 divs up
     }
-    else if(e.keycode === 37){
+    else if (e.keycode === 37) {
         direction = -1;//left, the snake will go left on div
     }
-    else if(e.keycode === 40){
+    else if (e.keycode === 40) {
         direction = direction + 10; //down the snake head will instantly appear 10 divs below from the current div
     }
 }
 
 
-up.addEventListener("click", () =>direction = -width);
-bottom.addEventListener("click", () =>direction = +width);
-left.addEventListener("click", () =>direction = -1);
-right.addEventListener("click", () =>direction = 1);
+up.addEventListener("click", () => direction = -width);
+bottom.addEventListener("click", () => direction = +width);
+left.addEventListener("click", () => direction = -1);
+right.addEventListener("click", () => direction = 1);
 
 function replay() {
     grid.innerHTML = "";
     createBoard();
     startGame();
     popup.style.display = "none";
-    
+
 }
 
 
 /*document.addEventListener("keyup", control(e));    */
+
+
+
+// buttons

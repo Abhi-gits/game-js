@@ -2,35 +2,57 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        
-        <title>Snake-Game</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Snake-Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
-        <h1>Snake Game</h1>
-        <h2>Score:</h2>
-        <div class="scoreDisplay"></div>
-        <div class="grid"></div>
-        <div class="button">
-            <button class="top">top</button>
-            <button class="bottom">bottom</button>
-            <button class="left">left</button>
-            <button class="right">right</button>
-        </div>
-        <div class="popup">
-            <button class="playAgain">Play Again</button>
-        </div>
-        
-        <script src="script.js" async defer></script>
-    </body>
+
+    <h1>Snake Game</h1>
+    <h2>Score:</h2>
+    <div class="scoreDisplay"></div>
+    <div class="grid"></div>
+
+
+    <!-- buttons arrow -->
+    <div class="keys">
+        <div class="top up arr"><i class="fa fa-arrow-up"></i></div>
+        <br />
+        <div class="left arr"><i class="fa fa-arrow-left"></i></div>
+        <div class="bottom down arr"><i class="fa fa-arrow-down"></i></div>
+        <div class="right arr"><i class="fa fa-arrow-right"></i></div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="names">
+        <div class="uptext"></div>
+        <div class="downtext"></div>
+        <div class="lefttext"></div>
+        <div class="righttext"></div>
+        <div class="b"></div>
+        <div class="a"></div>
+    </div>
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <div class="popup">
+        <button class="playAgain">Play Again</button>
+    </div>
+
+    <script src="script.js" async defer></script>
+</body>
+
 </html>
