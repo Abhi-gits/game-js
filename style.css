@@ -1,10 +1,10 @@
-body{
+body {
     background: aqua;
 
 }
 
 
-.grid{
+.grid {
     width: 400px;
     height: 400px;
     border: 3px solid rgb(245, 134, 6);
@@ -12,33 +12,33 @@ body{
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    
+
 }
 
-.grid div{
+.grid div {
     width: 20px;
     height: 20px;
     /*border: 2px rgb(147, 34, 218) solid;
-    box-sizing: border-box;  */ 
+    box-sizing: border-box;  */
 }
 
-.button{
+.button {
     margin: 20px 40%;
     padding: 5px;
-    
+
 }
 
-.snake{
-    background: rgb(255, 34, 0);   
+.snake {
+    background: rgb(255, 34, 0);
 }
 
-.apple{
+.apple {
     background: yellow;
     border-radius: 20px;
-    
+
 }
 
-.popup{
+.popup {
     background: green;
     width: 100px;
     height: 40px;
@@ -49,3 +49,78 @@ body{
     display: flex;
 }
 
+
+/* Button arrow */
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+
+html {
+    background: radial-gradient(#000, #111);
+    height: 100%;
+}
+
+.keys {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    width: 250px;
+    height: 100px;
+    margin: auto;
+}
+
+.arr {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: grey;
+    color: white;
+    font-size: 50px;
+    border-right: 10px solid darken(grey, 20);
+    border-bottom: 10px solid darken(grey, 20);
+    border-left: 10px solid darken(grey, 15);
+    border-top: 10px solid darken(grey, 10);
+    display: inline-block;
+    margin: 5px;
+    transition: all .05s linear;
+
+    /* &:active {
+        border-bottom: 8px solid darken(grey, 20);
+        text-shadow: 0 0 10px white, 0 0 10px white, 0 0 20px white;
+        transform: translate(0, 2px);
+    }
+
+    user-select: none; */
+}
+
+.up {
+    position: relative;
+    top: -4px;
+}
+
+.pressed {
+    border-bottom: 8px solid darken(grey, 20);
+    text-shadow: 0 0 10px white;
+    transform: translate(0, 2px);
+}
+
+.names {
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white;
+}
+
+.b {
+    color: blue;
+    text-shadow: 0 0 10px blue, 0 0 10px blue, 0 0 10px blue, 0 0 10px blue;
+    font-size: 100px;
+    font-family: serif;
+}
+
+.a {
+    color: yellow;
+    text-shadow: 0 0 10px yellow, 0 0 10px yellow, 0 0 10px yellow, 0 0 10px yellow;
+    font-size: 100px;
+    font-family: serif;
+}
