@@ -51,7 +51,7 @@ function startGame(){
 function moveOutcome() {
     let squares = document.querySelectorAll(".grid div");
     if (checkForHits(squares)) {
-        alert("you hit something");
+        alert("Oops!! You hit something");
         popup.style.display = "flex";
         score = 0;
         return clearInterval(interval);
