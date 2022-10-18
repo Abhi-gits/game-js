@@ -36,7 +36,6 @@ function createBoard() {
 function startGame() {
   let squares = document.querySelectorAll(".grid div");
   randomApple(squares);
-  //random apple
   direction = 1;
   scoreDisplay.innerHTML = score;
   intervalTime = 500;
@@ -45,9 +44,10 @@ function startGame() {
   interval = setInterval(moveOutcome, intervalTime);
 }
 
-function moveOutcome() {
+async function moveOutcome() {
   let squares = document.querySelectorAll(".grid div");
   if (checkForHits(squares)) {
+    await new Audio("./sounds/game_over.mp3").play()
     alert("Oops!! You hit something");
     popup.style.display = "flex";
     score = 0;
@@ -86,6 +86,7 @@ function eatApple(squares, tail) {
     squares[currentSnake[0]].classList.remove("apple");
     squares[tail].classList.add("snake");
     currentSnake.push(tail);
+    new Audio("./sounds/ting.mp3").play()
     randomApple(squares);
     score++;
     scoreDisplay.textContent = score;
