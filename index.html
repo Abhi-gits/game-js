@@ -4,26 +4,32 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
-  <head>
-    <meta charset="utf-8" />
 
-    <title>Snake-Game</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      h1 {
-        text-align: center;
-      }
+<head>
+  <meta charset="utf-8" />
 
-      h2 {
-        text-align: center;
-      }
-    </style>
-  </head>
+  <title>Snake-Game</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    h1 {
+      text-align: center;
+      margin: 0px;
+      padding: 17px 0px 0px;
+    }
 
-  <body>
-    <!--[if lt IE 7]>
+
+    h2 {
+      text-align: center;
+      margin: 0px;
+      padding: 12px 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an
         <strong>outdated</strong>
@@ -33,31 +39,29 @@
       </p>
     <![endif]-->
 
-    <h1>Snake Game</h1>
-    <h2>
-      Score:
-      <div class="scoreDisplay"></div>
-    </h2>
-    <div class="grid"></div>
+  <h1>Snake Game</h1>
+  <h2>
+    Score:
+    <div class="scoreDisplay"></div>
+  </h2>
+  <div class="grid"></div>
 
-    <!-- buttons arrow -->
-    <div class="keys">
-      <div class="top up arr"><i class="fa fa-arrow-up"></i></div>
-      <br />
-      <div class="left arr"><i class="fa fa-arrow-left"></i></div>
-      <div class="bottom down arr"><i class="fa fa-arrow-down"></i></div>
-      <div class="right arr"><i class="fa fa-arrow-right"></i></div>
-    </div>
+  <!-- buttons arrow -->
+  <div class="keys">
+    <div class="top up arr"><i class="fa fa-arrow-up"></i></div>
+    <br />
+    <div class="left arr"><i class="fa fa-arrow-left"></i></div>
+    <div class="bottom down arr"><i class="fa fa-arrow-down"></i></div>
+    <div class="right arr"><i class="fa fa-arrow-right"></i></div>
+  </div>
 
-    <link
-      href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
-      rel="stylesheet"
-    />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
 
-    <div class="popup">
-      <button class="playAgain">Play Again</button>
-    </div>
+  <div class="popup">
+    <button class="playAgain">Play Again</button>
+  </div>
 
-    <script src="script.js" async defer></script>
-  </body>
+  <script src="script.js" async defer></script>
+</body>
+
 </html>

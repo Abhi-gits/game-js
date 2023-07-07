@@ -1,5 +1,7 @@
 body {
-    background: darkgray;
+    background: #ecdddd;
+    margin: 0px;
+    height: 100%;
 
 }
 
@@ -8,7 +10,7 @@ body {
     width: 400px;
     height: 400px;
     border: 3px solid rgb(34, 33, 32);
-    background-color: lightslategray;
+    background-color: rgb(47, 144, 8);
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -27,23 +29,24 @@ body {
 }
 
 .snake {
-    background: rgb(7, 5, 5);
+    background: rgb(235, 204, 7);
 }
 
 .apple {
-    background: rgb(119, 119, 67);
+    background: rgb(248, 8, 8);
     border-radius: 20px;
 
 }
 
 .popup {
-    background: rgb(128, 176, 128);
+    background: rgb(24 27 24);
     width: 100px;
     height: 40px;
     position: fixed;
     justify-content: center;
     align-items: center;
-    left: 50%;
+    bottom: 60px;
+    left: 75%;
     display: block flow;
 }
 
@@ -60,8 +63,10 @@ html {
     font-family: 'Lato', sans-serif;
     text-align: center;
     width: 250px;
-    height: 100px;
-    margin: auto;
+    height: 130px;
+    background-color: #ecdddd;
+    margin: 15px 0px 0px 600px;
+    padding: 4px 40px;
 }
 
 .arr {
@@ -71,7 +76,7 @@ html {
     text-align: center;
     line-height: 50px;
     background: grey;
-    color: white;
+    color: blue;
     font-size: 50px;
     border-right: 10px solid darken(grey, 20);
     border-bottom: 10px solid darken(grey, 20);
